@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <div id="container-main">
+      <header id="nav-menu">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="images/logo.svg" alt="inc logo" /></a>
+          </div>
+          <div id="hamburger" onclick="myHamburger(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <nav class="menu">
+            <div class="menu-bar">
+              <div class="container">
+                <div class="container-start">
+                  <div
+                    class="bar-items features"
+                    id="features"
+                    onclick="myFeatures(this)"
+                  >
+                    <span>
+                      <a href="#">Features</a>
+
+                      <img
+                        src="images/icon-arrow-down.svg"
+                        alt=""
+                        class="arrow-down"
+                      />
+                      <img
+                        src="images/icon-arrow-up.svg"
+                        alt=""
+                        class="arrow-up hidden"
+                      />
+                    </span>
+                    <div id="dropdown1" class="dropdown1 hidden">
+                      <ul>
+                        <li class="dropdown1-items">
+                          <a href="#" class="dropdown1-link">
+                            <img
+                              src="images/icon-todo.svg"
+                              alt=""
+                              class="icon"
+                            />
+                            <p>Todo list</p>
+                          </a>
+                        </li>
+                        <li class="dropdown1-items">
+                          <a href="#" class="dropdown1-link">
+                            <img
+                              src="images/icon-calendar.svg"
+                              alt=""
+                              class="icon"
+                            />
+                            <p>Calendar</p>
+                          </a>
+                        </li>
+                        <li class="dropdown1-items">
+                          <a href="#" class="dropdown1-link">
+                            <img
+                              src="images/icon-reminders.svg"
+                              alt=""
+                              class="icon"
+                            />
+                            <p>Reminders</p>
+                          </a>
+                        </li>
+                        <li class="dropdown1-items">
+                          <a href="#" class="dropdown1-link">
+                            <img
+                              src="images/icon-planning.svg"
+                              alt=""
+                              class="icon"
+                            />
+                            <p>Planning</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="bar-items company"
+                    id="company"
+                    onclick="myCompany(this)"
+                  >
+                    <span>
+                      <a href="#">Company</a>
+
+                      <img
+                        src="images/icon-arrow-down.svg"
+                        alt=""
+                        class="down-arrow"
+                      />
+                      <img
+                        src="images/icon-arrow-up.svg"
+                        alt=""
+                        class="up-arrow hidden"
+                      />
+                    </span>
+                    <div id="dropdown2" class="dropdown2 hidden">
+                      <ul>
+                        <li class="dropdown2-items">
+                          <a href="#" class="dropdown2-link">History</a>
+                        </li>
+                        <li class="dropdown2-items">
+                          <a href="#" class="dropdown2-link">Our Team</a>
+                        </li>
+                        <li class="dropdown2-items">
+                          <a href="#" class="dropdown2-link">Blog</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="bar-items"><a href="#">Careers</a></div>
+                  <div class="bar-items"><a href="#">About</a></div>
+                </div>
+                <!-- <div class="spacer"></div> -->
+                <div class="container-end">
+                  <div class="end-items"><a href="#">Login</a></div>
+                  <div class="end-items">
+                    <button class="register-btn">Register</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="container-one">
+          <div class="title">Make remote work</div>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="learn-btn">Learn more</button>
+          <div class="clients">
+            <img src="images/client-databiz.svg" alt="databiz" />
+            <img src="images/client-audiophile.svg" alt="audiophile" />
+            <img src="images/client-meet.svg" alt="meet" />
+            <img src="images/client-maker.svg" alt="maker" />
+          </div>
+        </div>
+        <div class="container-spacer"></div>
+        <div class="container-two">
+          <div class="desktop-image">
+            <img
+              src="images/image-hero-desktop.png"
+              alt="desktop image"
+              class="desktop"
+            />
+            <img
+              src="images/image-hero-mobile.png"
+              alt="mobile image"
+              class="mobile"
+            />
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Noor Rahmi</a>.
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

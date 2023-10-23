@@ -1,0 +1,15 @@
+@use "../utils" as u;
+
+footer {
+  @include u.breakpoint-down(transit) {
+    margin-top: u.rem(50);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

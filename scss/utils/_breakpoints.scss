@@ -1,0 +1,28 @@
+//375px, 750px, 900px, 1440px
+$breakpoints-up: (
+  "mobile": 375px,
+  "transit": 750px,
+  "tablet": 1100px,
+  "desktop": 1440px,
+);
+
+//374.98px, 499.98px, 869.98px, 1099.98px, 1439.98px
+$breakpoints-down: (
+  "tiny": 374.98px,
+  "small": 500.98px,
+  "transit": 869.98px,
+  "medium": 1099.98px,
+  "large": 1439.98px,
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

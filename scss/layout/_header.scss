@@ -1,0 +1,197 @@
+@use "../utils" as u;
+
+.nav-container {
+  width: u.$desktopWidth;
+  padding: u.rem(30) u.rem(40) 0;
+  height: u.rem(60);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: u.rem(175);
+  @include u.breakpoint-down(medium) {
+    padding: u.rem(30) u.rem(20) 0;
+  }
+  @include u.breakpoint-down(transit) {
+    width: 100vw;
+    padding: u.rem(20) u.rem(20) 0;
+    height: u.rem(60);
+    margin-bottom: u.rem(20);
+  }
+  @include u.breakpoint-down(small) {
+    width: u.$mobileWidth;
+  }
+}
+
+#nav-menu {
+  @include u.breakpoint-down(small) {
+    width: u.$mobileWidth;
+  }
+}
+
+.menu {
+  @include u.breakpoint-down(transit) {
+    display: block;
+    background-color: var(--almost-white);
+    z-index: 1;
+    position: fixed;
+    top: u.rem(60);
+    right: u.rem(60);
+    width: u.rem(300);
+    height: 90vh;
+    padding-top: u.rem(40);
+    opacity: 0;
+    border-radius: u.rem(16);
+  }
+  @include u.breakpoint-down(small) {
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    padding-top: u.rem(20);
+    border-radius: 0;
+  }
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(u.$desktopWidth - 224px);
+  @include u.breakpoint-down(medium) {
+    width: calc(u.$desktopWidth - 164px);
+  }
+  @include u.breakpoint-down(transit) {
+    width: calc(100vw - 84px - 20px);
+    display: block;
+  }
+  @include u.breakpoint-down(small) {
+    position: relative;
+    top: u.rem(60);
+    width: 60vw;
+  }
+}
+
+.container-start,
+.container-end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: u.rem(40);
+  @include u.breakpoint-down(transit) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.container-start {
+  @include u.breakpoint-down(transit) {
+    align-items: flex-start;
+    gap: u.rem(20);
+    padding-bottom: u.rem(40);
+    padding-left: u.rem(25);
+  }
+  @include u.breakpoint-down(small) {
+    gap: u.rem(30);
+  }
+}
+
+.container-end {
+  margin-right: u.rem(40);
+  @include u.breakpoint-down(medium) {
+    margin-right: 0;
+  }
+  @include u.breakpoint-down(transit) {
+    align-items: center;
+    gap: u.rem(20);
+  }
+}
+
+.dropdown1 ul,
+.dropdown2 ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  background-color: var(--white);
+  @include u.breakpoint-down(transit) {
+    padding-left: u.rem(20);
+    width: auto;
+    margin-bottom: 0;
+    z-index: 1;
+    position: relative;
+    background-color: transparent;
+  }
+}
+
+.dropdown1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.dropdown1 ul {
+  padding: u.rem(20);
+  width: u.rem(150);
+  height: u.rem(160);
+  margin-bottom: u.rem(8);
+  justify-content: space-between;
+  -webkit-box-shadow: -17px 2px 76px 4px rgba(20, 20, 20, 0.2);
+  -moz-box-shadow: -17px 2px 76px 4px rgba(20, 20, 20, 0.2);
+  box-shadow: -17px 2px 76px 4px rgba(20, 20, 20, 0.2);
+  border-radius: u.rem(10);
+
+  @include u.breakpoint-down(transit) {
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: 0 0 0 u.rem(20);
+    width: auto;
+    height: auto;
+  }
+
+  @include u.breakpoint-down(small) {
+    padding: 0 0 0 u.rem(18);
+    left: 0;
+  }
+}
+
+.dropdown1-items a,
+.dropdown2-items a {
+  display: flex;
+  align-items: center;
+  height: u.rem(20);
+  @include u.breakpoint-down(transit) {
+    height: u.rem(32);
+  }
+}
+
+.dropdown1-items a .icon {
+  width: u.rem(18);
+  height: auto;
+  margin-right: u.rem(12);
+}
+
+.dropdown2 ul {
+  padding: u.rem(20);
+  width: u.rem(115);
+  height: u.rem(124);
+  justify-content: space-between;
+  -webkit-box-shadow: -17px 2px 76px 4px rgba(20, 20, 20, 0.2);
+  -moz-box-shadow: -17px 2px 76px 4px rgba(20, 20, 20, 0.2);
+  box-shadow: -17px 2px 76px 4px rgba(20, 20, 20, 0.2);
+  border-radius: u.rem(10);
+  @include u.breakpoint-down(transit) {
+    box-shadow: none;
+    padding: 0 0 0 u.rem(20);
+    width: auto;
+    height: auto;
+  }
+  @include u.breakpoint-down(small) {
+    padding: 0 0 0 u.rem(18);
+  }
+}

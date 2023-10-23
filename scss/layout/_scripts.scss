@@ -1,0 +1,32 @@
+@use "../utils" as u;
+
+.hidden {
+  display: none;
+}
+
+.color {
+  background-color: var(--almost-white);
+
+  @include u.breakpoint-down(transit) {
+    background-color: rgba(20, 20, 20, 0.2);
+  }
+}
+
+.menu.change {
+  @include u.breakpoint-down(transit) {
+    opacity: 1;
+  }
+}
+.desktop {
+  display: block;
+  @include u.breakpoint-down(transit) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  @include u.breakpoint-down(transit) {
+    display: block;
+  }
+}

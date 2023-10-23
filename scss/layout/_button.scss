@@ -1,0 +1,92 @@
+@use "../utils" as u;
+
+#hamburger {
+  display: inline-block;
+  cursor: pointer;
+  @include u.breakpoint-down(transit) {
+    margin-left: calc(100vw - 50px - 84px - 40px);
+    z-index: 4;
+  }
+  @include u.breakpoint-down(small) {
+    margin-left: u.$hamburger;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  display: none;
+  @include u.breakpoint-down(transit) {
+    display: block;
+    z-index: 4;
+  }
+}
+
+.change .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}
+
+.logo {
+  margin-right: u.rem(60);
+  @include u.breakpoint-down(medium) {
+    margin-right: u.rem(40);
+  }
+  @include u.breakpoint-down(transit) {
+    margin-right: 0;
+  }
+}
+
+.register-btn {
+  width: u.rem(100);
+  height: u.rem(36);
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid var(--medium-gray);
+  border-radius: u.rem(10);
+  color: var(--medium-gray);
+  cursor: pointer;
+  &:hover {
+    color: var(--almost-black);
+    border: 2px solid var(--almost-black);
+  }
+  @include u.breakpoint-down(transit) {
+    width: u.rem(195);
+    height: u.rem(40);
+  }
+  @include u.breakpoint-down(small) {
+    width: min(calc(60vw - 40px), 195px);
+  }
+}
+
+.learn-btn {
+  width: u.rem(160);
+  height: u.rem(50);
+  text-align: center;
+  background-color: var(--almost-black);
+  color: var(--white);
+  border-radius: u.rem(10);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--white);
+    color: var(--almost-black);
+  }
+  @include u.breakpoint-down(transit) {
+    width: u.rem(136);
+    height: u.rem(48);
+    border-radius: u.rem(12);
+    margin-bottom: u.rem(130);
+  }
+}

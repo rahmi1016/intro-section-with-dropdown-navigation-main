@@ -1,0 +1,57 @@
+@use "../utils" as u;
+body {
+  font-family: u.$Epi;
+}
+
+.register-btn,
+.learn-btn {
+  font-size: u.rem(15);
+  font-family: u.$Epi;
+}
+
+.bar-items span,
+.dropdown1-items p,
+.dropdown2-items a {
+  color: var(--medium-gray);
+  &:hover {
+    color: var(--almost-black);
+  }
+}
+
+.dropdown1-items p,
+.dropdown2-items a {
+  font-size: u.rem(14);
+}
+
+.title {
+  font-size: u.rem(72);
+  font-weight: 700;
+  @include u.breakpoint-down(medium) {
+    font-size: u.rem(48);
+  }
+  @include u.breakpoint-down(transit) {
+    font-size: u.rem(60);
+    text-align: center;
+    margin-bottom: u.rem(24);
+  }
+  @include u.breakpoint-down(small) {
+    font-size: u.rem(36);
+  }
+}
+
+.container-one p {
+  font-size: u.rem(18);
+  color: var(--medium-gray);
+  line-height: 1.6;
+  @include u.breakpoint-down(medium) {
+    font-size: u.rem(14);
+  }
+  @include u.breakpoint-down(transit) {
+    font-size: u.rem(20);
+    text-align: center;
+    margin-bottom: u.rem(30);
+  }
+  @include u.breakpoint-down(small) {
+    font-size: u.rem(16);
+  }
+}

@@ -1,0 +1,4 @@
+$desktopWidth: min(100vw, 1440px);
+$mobileWidth: clamp(319.98px, 100vw, 375px);
+$hamburger: clamp(160px, calc(100vw - 159px), 191px);
+$titleFont: max(6vw, 60px);
